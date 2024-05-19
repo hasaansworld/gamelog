@@ -11,7 +11,7 @@ export default {
   layout: 'empty',
   setup() {
     useHead({
-      title: 'Backlog.rip',
+      title: 'Gamelog.rip',
       bodyAttrs: {
         class: 'updater d-flex flex-column',
       },

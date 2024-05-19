@@ -21,7 +21,7 @@ export const useStateStore = defineStore('state', {
     index: [], // Holds index for every state keyed by state.id
 
     pinned: [], // Holds index for special state 'pinned'
-    backlog: [], // Holds index for special state 'backlog'
+    gamelog: [], // Holds index for special state 'gamelog'
     playing: [], // Holds index for special state 'playing'
     completed: [], // Holds index for special state 'completed'
 

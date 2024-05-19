@@ -311,7 +311,7 @@
                 style="color: black">
                 <img
                   :src="
-                    'https://steam-backlog.com/images/' +
+                    'https://steam-gamelog.com/images/' +
                     format.scoreToHuman(app.scores.oc, 'oc', 'label') +
                     '-head.png'
                   "
@@ -424,7 +424,7 @@
           <div class="my-2">
             <small v-if="app.is.lib" class="text-muted" :title="app.is.lib">
               <Icon
-                v-tippy="'In Backlog.rip since ' + $moment(app.created_at).format('LL')"
+                v-tippy="'In Gamelog.rip since ' + $moment(app.created_at).format('LL')"
                 size="16"
                 style="transform: translateY(-2px)"
                 class="me-1">

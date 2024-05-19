@@ -45,7 +45,7 @@ let app = {
   // count.data is the # of games in cache
   // count.library is the # of games in local library
   //
-  // states.backlog (and others) is the # of games in each state
+  // states.gamelog (and others) is the # of games in each state
   //+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   count: {
     api: 0,
@@ -53,7 +53,7 @@ let app = {
     library: 0,
 
     states: {
-      backlog: 0,
+      gamelog: 0,
     },
   },
 

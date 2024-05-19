@@ -50,7 +50,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-              <a href="http://api.backlog.rip/auth/steam" class="btn btn-github w-100">
+              <a href="http://api.gamelog.rip/auth/steam" class="btn btn-github w-100">
                 <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="http://api.backlog.rip/auth/google" class="btn btn-green w-100">
+              <a href="http://api.gamelog.rip/auth/google" class="btn btn-green w-100">
                 <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="http://api.backlog.rip/auth/google" class="btn btn-google w-100">
+              <a href="http://api.gamelog.rip/auth/google" class="btn btn-google w-100">
                 <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

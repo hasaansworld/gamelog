@@ -154,8 +154,8 @@ export default {
       // TODO: things that will be imported
       // states: [],
       // collections: [],
-      // data.backlog will be defined as well from steam.onScan
-      steambacklog: {}, // quick dirty hack
+      // data.gamelog will be defined as well from steam.onScan
+      steamgamelog: {}, // quick dirty hack
     }
 
     try {
@@ -173,7 +173,7 @@ export default {
 
       if (steam.onScan !== undefined) {
         x.log('Check 4.4: onScan hook')
-        data.steambacklog = await steam.onScan(data, x)
+        data.steamgamelog = await steam.onScan(data, x)
         x.log(`🆗 onScan hook executed`)
       }
 

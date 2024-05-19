@@ -1,5 +1,5 @@
 /**
- * @project: backlog
+ * @project: gamelog
  * @file:    \plugins\tabler.js
  * @desc:    ...
  * -------------------------------------------

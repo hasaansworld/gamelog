@@ -14,7 +14,7 @@
       <h2 class="text-center mb-4">Update required</h2>
 
       <p class="mb-4">
-        There is a new major version of Backlog.rip available. The new version includes
+        There is a new major version of Gamelog.rip available. The new version includes
         important updates and a new database schema that is not compatible with the
         current version. To continue using the application, first you need to update the
         database.
@@ -51,7 +51,7 @@
         <div class="progress-bar progress-bar-indeterminate"></div>
       </div>
 
-      <a href="https://backlog.rip" class="btn btn-outline-primary w-100">
+      <a href="https://gamelog.rip" class="btn btn-outline-primary w-100">
         Go back to the site
       </a>
     </div>
@@ -73,7 +73,7 @@ definePageMeta({
   layout: 'empty',
 })
 
-const db = new Dexie('backlog.rip')
+const db = new Dexie('gamelog.rip')
 await db.open()
 
 const log = ref('')
@@ -103,7 +103,7 @@ const download = (blob) => {
   const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/json' }))
   const link = document.createElement('a')
   link.href = url
-  link.setAttribute('download', 'my.backlog')
+  link.setAttribute('download', 'my.gamelog')
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)

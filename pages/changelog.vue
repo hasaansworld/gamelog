@@ -29,15 +29,6 @@
               </a>
 
               <span class="px-2"></span>
-              <a
-                href="https://github.com/gsabater/backlog.rip"
-                class="link-purple link-underline-opacity-25"
-                target="_blank">
-                <Icon size="14" class="me-0" style="transform: translateY(-1px)">
-                  BrandGithub
-                </Icon>
-                Github
-              </a>
             </div>
           </div>
         </div>

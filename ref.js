@@ -1,6 +1,6 @@
 /**
- * @project: steam-backlog
- * @file:    backlog.tools.filter.js
+ * @project: steam-gamelog
+ * @file:    gamelog.tools.filter.js
  * @desc:    ...
  * -------------------------------------------
  * Created Date: 20th May 2019
@@ -8,13 +8,13 @@
  **/
 
 //+-------------------------------------------------
-// Backlog tools: filter
+// Gamelog tools: filter
 // Filters apps, from library, wishlist, all, or an array of IDs
-// Usually used with the backlog.discover component
+// Usually used with the gamelog.discover component
 // -----
 // Usage:
-// backlog.filter({'string':'borderlands'}, 'library')
-// backlog.filter({'tags':['F2P']}, 'all')
+// gamelog.filter({'string':'borderlands'}, 'library')
+// gamelog.filter({'tags':['F2P']}, 'all')
 // -----
 // Created on Tue Oct 16 2018
 // Updated on Thu Jan 24 2019
@@ -76,7 +76,7 @@ function filter(_filters, apps) {
   // Filters override
   // Replaces local values from func param
   //+---------------------------------------
-  filters = backlog.mergeProps(filters, _filters)
+  filters = gamelog.mergeProps(filters, _filters)
   filters.minScore = parseInt(filters.minScore, 0)
 
   // Data
@@ -142,13 +142,13 @@ function filter(_filters, apps) {
     apps = Object.keys(window.db)
   }
 
-  if (apps === 'backlog') {
-    apps = store.state.flags[filters.backlog]
+  if (apps === 'gamelog') {
+    apps = store.state.flags[filters.gamelog]
   }
 
   if (
     apps === 'favorites' ||
-    apps === 'backlog' ||
+    apps === 'gamelog' ||
     apps === 'playing' ||
     apps === 'completed' ||
     apps === 'hold' ||
@@ -338,8 +338,8 @@ function filter(_filters, apps) {
     // prettier-ignore
     if (filters.settings.includeHidden === false &&
           (
-              filters.mode !== 'backlog' ||
-              filters.mode === 'backlog' && filters.backlog !== 'hided'
+              filters.mode !== 'gamelog' ||
+              filters.mode === 'gamelog' && filters.gamelog !== 'hided'
           )
       ) {
           if (store.state.flags.hided.indexOf(app.appid) > -1) {
@@ -348,12 +348,12 @@ function filter(_filters, apps) {
       }
 
     // Filter: Excludetagged
-    // Removed apps already in backlog
+    // Removed apps already in gamelog
     //+---------------------------------------
     if (
-      filters.mode !== 'backlog' &&
+      filters.mode !== 'gamelog' &&
       filters.settings.excludeTagged === true &&
-      (store.state.flags.backlog.indexOf(app.appid) > -1 ||
+      (store.state.flags.gamelog.indexOf(app.appid) > -1 ||
         store.state.flags.playing.indexOf(app.appid) > -1 ||
         store.state.flags.completed.indexOf(app.appid) > -1 ||
         store.state.flags.dropped.indexOf(app.appid) > -1 ||
@@ -365,7 +365,7 @@ function filter(_filters, apps) {
     // Filter: Exclude Owned
     // Removes owned games
     //+---------------------------------------
-    if (filters.mode !== 'backlog' && filters.settings.excludeOwned === true) {
+    if (filters.mode !== 'gamelog' && filters.settings.excludeOwned === true) {
       if (window.library[app.appid] !== undefined) {
         continue
       }
@@ -578,6 +578,6 @@ function filter(_filters, apps) {
   }
 }
 
-// Export function to global Backlog object
+// Export function to global Gamelog object
 // -----
-window.backlog.filter = filter
+window.gamelog.filter = filter

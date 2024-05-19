@@ -8,7 +8,7 @@
       </div>
       <p>
         Here you can link your profiles from other stores and platforms to your
-        backlog.rip account.
+        gamelog.rip account.
       </p>
     </div>
   </div>
@@ -71,7 +71,7 @@
           <small
             v-tippy="{
               content:
-                'Your Steam library will be automatically updated to stay synchronized with your backlog.rip account. This update process occurs every 24 hours',
+                'Your Steam library will be automatically updated to stay synchronized with your gamelog.rip account. This update process occurs every 24 hours',
               placement: 'top',
             }"
             class="text-muted cursor-help">

@@ -10,7 +10,7 @@
       v-if="from"
       :style="{ color: oldst.color + ' !important' }"
       style="font-size: 0.775rem">
-      {{ oldst.name || 'Not in your backlog' }}
+      {{ oldst.name || 'Not in your gamelog' }}
       <Icon class="mx-1" style="color: #666">ArrowRightRhombus</Icon>
     </span>
 

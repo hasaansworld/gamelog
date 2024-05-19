@@ -55,9 +55,9 @@
               </div>
             </div>
             <div v-if="step == 0">
-              <h1>Welcome to Backlog.rip</h1>
+              <h1>Welcome to Gamelog.rip</h1>
               <p>
-                With Backlog.rip you can organize, keep track of your progress and have a
+                With Gamelog.rip you can organize, keep track of your progress and have a
                 single place for all your games.
               </p>
 
@@ -107,7 +107,7 @@
             <div v-if="step == 4">
               <h1>Your games, your way</h1>
               <p>
-                You can manually add any games to your Backlog, even if you don't have
+                You can manually add any games to your Gamelog, even if you don't have
                 them in any library. Then, you can add a state to any game to keep track
                 of your progress.
               </p>
@@ -137,7 +137,7 @@ export default {
   name: 'Onboarding',
   setup() {
     definePageMeta({
-      title: 'Welcome to Backlog.rip',
+      title: 'Welcome to Gamelog.rip',
     })
   },
   data() {

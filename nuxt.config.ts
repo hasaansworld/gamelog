@@ -1,5 +1,5 @@
 /**
- * @project: backlog
+ * @project: gamelog
  * @file:    \nuxt.config.ts
  * @desc:    https://nuxt.com/docs/api/configuration/nuxt-config
  *           https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html
@@ -7,7 +7,6 @@
  * Created Date: 26th October 2023
  * Modified:
  */
-
 
 // import { mapState } from "pinia";
 
@@ -74,8 +73,8 @@ export default defineNuxtConfig({
   // Seo Modules and configuration
   //+-------------------------------------------------
   site: {
-    url: 'https://backlog.rip',
-    name: 'Backlog.rip',
+    url: 'https://gamelog.dev',
+    name: 'Gamelog',
     description: 'Free and open source library manager for all your games.',
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
   },
@@ -90,7 +89,7 @@ export default defineNuxtConfig({
 
     sources: [
       // fetch from an unauthenticated endpoint
-      'https://api.backlog.rip/dev/sitemap',
+      'https://gamelog.dev/sitemap',
     ],
   },
 

@@ -86,7 +86,7 @@
         <div v-if="false && $app.dev" class="col-12">
           <div class="card">
             <div class="card-body">
-              <p class="mb-3">Games and backlog breakdown</p>
+              <p class="mb-3">Games and gamelog breakdown</p>
               <div class="progress progress-separated mb-3">
                 <div
                   v-for="(state, i) in states"

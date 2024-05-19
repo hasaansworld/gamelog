@@ -1,5 +1,5 @@
 /**
- * @project: backlog.rip
+ * @project: gamelog.rip
  * @file:    \modules\importers\steam-public.js
  * @desc:    Utility helper to make requests to and return a list of games
  * -------------------------------------------
@@ -139,7 +139,7 @@ export default {
   // Updated on Mon Mar 13 2023
   //+-------------------------------------------------
   async getUserdata() {
-    let url = 'https://api.backlog.rip/fetch/steam/userdata'
+    let url = 'https://api.gamelog.rip/fetch/steam/userdata'
     let jxr = await $axios.get(url + '?steamid=' + $account.steam)
 
     if (jxr.data.status == 'success') {
@@ -155,7 +155,7 @@ export default {
   // Created on Thu Dec 08 2022
   //+-------------------------------------------------
   async getGames() {
-    let url = 'https://api.backlog.rip/fetch/steam/games'
+    let url = 'https://api.gamelog.rip/fetch/steam/games'
     let jxr = await $axios.get(url + '?steamid=' + $account.steam)
 
     if (jxr.data.status == 'success') {
@@ -170,8 +170,8 @@ export default {
   // -----
   // Created on Mon Feb 12 2024
   //+-------------------------------------------------
-  async getSteamBacklog() {
-    let url = 'https://api.backlog.rip/fetch/steam-backlog'
+  async getSteamGamelog() {
+    let url = 'https://api.gamelog.rip/fetch/steam-gamelog'
     let jxr = await $axios.get(url + '?steamid=' + $account.steam)
 
     if (jxr.data.status == 'success') {
@@ -187,8 +187,8 @@ export default {
   // Created on Mon Feb 12 2024
   //+-------------------------------------------------
   async onScan(data, x) {
-    data.backlog = await this.getSteamBacklog()
-    return data.backlog
+    data.gamelog = await this.getSteamGamelog()
+    return data.gamelog
   },
 
   //+-------------------------------------------------

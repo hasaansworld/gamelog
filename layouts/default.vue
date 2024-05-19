@@ -82,7 +82,7 @@
           ">
           <img
             src="/img/logo.png"
-            alt="Backlog.rip"
+            alt="Gamelog.rip"
             class="navbar-brand-image d-none d-md-inline-block"
             nstyle="height: auto; width: 100px; transform: translateY(15px)"
             style="
@@ -90,7 +90,7 @@
               width: auto;
               filter: drop-shadow(0 0 1rem rgba(174, 62, 201, 0.2));
             " />
-          <h1 class="navbar-brand navbar-brand-autodark mt-0 pt-0">Backlog.rip</h1>
+          <h1 class="navbar-brand navbar-brand-autodark mt-0 pt-0">Gamelog.rip</h1>
         </NuxtLink>
 
         <!--
@@ -273,13 +273,6 @@
                   </svg>
                   Discord
                 </a>
-                <a
-                  href="https://github.com/gsabater/backlog.rip"
-                  class="dropdown-item"
-                  target="_blank">
-                  <Icon size="18" class="me-2">BrandGithub</Icon>
-                  Code on Github
-                </a>
 
                 <NuxtLink to="/changelog" class="dropdown-item">
                   <Icon size="18" class="me-2">Broadcast</Icon>
@@ -329,8 +322,8 @@
         </div> -->
 
         <!-- <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pa-0">
-          <!- - <h1 data-heading="Backlog.rip">Backlog.rip</h1> - ->
-          <!- - <span>Backlog.rip</span> - ->
+          <!- - <h1 data-heading="Gamelog.rip">Gamelog.rip</h1> - ->
+          <!- - <span>Gamelog.rip</span> - ->
           <input type="text" />
         </h1> -->
 
@@ -405,7 +398,7 @@
                       <NuxtLink
                         to="/library"
                         class="list-group-item list-group-item-action d-flex align-items-center">
-                        <span class="nav-link-title">Library and backlog</span>
+                        <span class="nav-link-title">Library and gamelog</span>
                       </NuxtLink>
 
                       <NuxtLink
@@ -549,11 +542,11 @@
                   A personal project, from 2016 to {{ new Date().getFullYear() }}
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://steam-backlog.com" class="link-secondary">
-                    Steam Backlog
+                  <a href="https://steam-gamelog.com" class="link-secondary">
+                    Steam Gamelog
                   </a>
                   and
-                  <a href="https://backlog.rip" class="link-secondary">Backlog.rip</a>
+                  <a href="https://gamelog.rip" class="link-secondary">Gamelog.rip</a>
                 </li>
                 <li class="list-inline-item">
                   Made with 💟 in
@@ -649,13 +642,6 @@
           </g>
         </svg>
         Discord
-      </a>
-      <a
-        href="https://github.com/gsabater/backlog.rip"
-        class="dropdown-item"
-        target="_blank">
-        <Icon size="18" class="me-2">BrandGithub</Icon>
-        Code on Github
       </a>
 
       <NuxtLink to="/changelog" class="dropdown-item">

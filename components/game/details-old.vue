@@ -340,7 +340,7 @@
       <div class="col-12 col-md-6" style="display: flex; align-items: flex-end">
         <small v-if="app._.date_owned" class="text-muted" :title="app._.date_owned">
           <Icon
-            v-tippy="'In Backlog.rip since ' + $moment(app.created_at).format('LL')"
+            v-tippy="'In Gamelog.rip since ' + $moment(app.created_at).format('LL')"
             size="16"
             style="transform: translateY(-2px)"
             class="me-1">

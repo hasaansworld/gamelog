@@ -3,7 +3,7 @@
     <div class="container-xl">
       <div class="row align-items-center">
         <div class="col-6 text-center px-4">
-          <h1 class="hero-title">Backlog.rip</h1>
+          <h1 class="hero-title">Gamelog.rip</h1>
 
           <p class="hero-description">
             Free and open source library manager for all your games.
@@ -39,15 +39,6 @@
               </NuxtLink>
 
               <span class="px-3">·</span>
-              <a
-                href="https://github.com/gsabater/backlog.rip"
-                class="link-secondary link-underline-opacity-0"
-                target="_blank">
-                <Icon size="14" class="me-0" style="transform: translateY(-1px)">
-                  BrandGithub
-                </Icon>
-                Source code on Github
-              </a>
 
               <span class="px-3">·</span>
 
@@ -119,16 +110,6 @@
           </NuxtLink>
 
           <span class="px-3">·</span>
-
-          <a
-            href="https://github.com/gsabater/backlog.rip"
-            class="link-secondary link-underline-opacity-0"
-            target="_blank">
-            <Icon size="14" class="me-0" style="transform: translateY(-1px)">
-              BrandGithub
-            </Icon>
-            Source code on Github
-          </a>
 
           <span class="px-3">·</span>
 

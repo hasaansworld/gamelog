@@ -151,7 +151,7 @@ export default {
 
       try {
         const blob = await this.$db.export({ prettyJson: false, progressCallback })
-        this.download(blob, 'my.backlog', 'application/json')
+        this.download(blob, 'my.gamelog', 'application/json')
       } catch (error) {
         console.error('' + error)
       }

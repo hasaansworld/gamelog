@@ -176,7 +176,7 @@
                 </div>
                 <p>
                   You can link your multiple store accounts and enable importers to get
-                  your games automatically to your backlog.rip library.
+                  your games automatically to your gamelog.rip library.
                 </p>
               </div>
             </div>

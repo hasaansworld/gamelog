@@ -21,13 +21,6 @@
             <div class="card-footer">
               <div class="d-flex">
                 <a
-                  href="https://github.com/gsabater/backlog.rip"
-                  target="_blank"
-                  class="btn btn-primary ms-auto">
-                  <Icon class="me-2">BrandGithub</Icon>
-                  Report on Github
-                </a>
-                <a
                   href="https://discord.gg/F2sPE5B"
                   target="_blank"
                   class="btn btn-primary ms-auto">
@@ -57,7 +50,7 @@
                   </p>
                 </div>
                 <div>
-                  <a class="btn btn-github" href="https://api.backlog.rip/auth/steam">
+                  <a class="btn btn-github" href="https://api.gamelog.rip/auth/steam">
                     <Icon class="me-2">BrandSteam</Icon>
                     Sign in with Steam
                   </a>
@@ -238,7 +231,7 @@
                     <small
                       v-tippy="{
                         content:
-                          'Your Steam library will be automatically updated to stay synchronized with your backlog.rip account. This update process occurs every 24 hours',
+                          'Your Steam library will be automatically updated to stay synchronized with your gamelog.rip account. This update process occurs every 24 hours',
                         placement: 'top',
                       }"
                       class="text-muted cursor-help">
@@ -294,19 +287,19 @@
                   </div>
 
                   <div
-                    v-if="data.steambacklog && data.steambacklog.account"
+                    v-if="data.steamgamelog && data.steamgamelog.account"
                     class="col-12">
                     <div class="card">
                       <div class="card-body">
                         <div class="d-flex align-items-center">
                           <label class="form-label">
-                            Your steam-backlog.com account has been found
+                            Your steam-gamelog.com account has been found
                           </label>
                         </div>
 
                         <div class="mb-3">
                           <div class="text-secondary mb-3">
-                            In future updates we will be able to import your old backlog
+                            In future updates we will be able to import your old gamelog
                             account
                           </div>
 
@@ -317,7 +310,7 @@
                               </span>
                               <span class="col">
                                 <strong class="d-block">
-                                  Backlog status on your library
+                                  Gamelog status on your library
                                 </strong>
                                 <span class="d-block text-secondary">
                                   Your completed games, games to play and more
@@ -330,7 +323,7 @@
                               </span>
                               <span class="col">
                                 <strong class="d-block">
-                                  {{ data.steambacklog.collections.length }} collections
+                                  {{ data.steamgamelog.collections.length }} collections
                                 </strong>
                                 <span class="d-block text-secondary">
                                   Each collection with every game in it
@@ -800,7 +793,7 @@
                 <div>
                   <NuxtLink to="/library" class="btn btn-primary w-100">
                     <Icon class="me-2">Apps</Icon>
-                    View your library and backlog
+                    View your library and gamelog
                   </NuxtLink>
 
                   <!-- <div class="btn btn-primary w-100" @click="store">Again</div>
@@ -830,11 +823,6 @@
               </div>
               <small class="text-muted">
                 By {{ module.author }},
-                <a
-                  href="https://github.com/gsabater/backlog.rip/blob/master/modules/importers/steam.js"
-                  target="_blank">
-                  version {{ module.version }}
-                </a>
                 <br />
                 Updated,
                 {{ dates.format(module.updated_at, 'LL') }}
@@ -879,11 +867,6 @@
             <div class="card-footer text-muted">
               This module is open source. If you want to know more about the code or
               review your privacy and security, you can
-              <a
-                href="https://github.com/gsabater/backlog.rip/blob/master/modules/importers"
-                target="_blank">
-                check the code on Github.
-              </a>
             </div>
           </div>
 
@@ -919,7 +902,7 @@ export default {
         user: {}, // Raw of the imported userdata
         games: [], // Raw library games from the scan process
         library: [], // Preloaded content of user library
-        steambacklog: {},
+        steamgamelog: {},
 
         appsToReview: [], // Processed array of apps missing in library
         appsToUpdate: [], // Processed array of apps already in library, that needs to update fields
@@ -1260,7 +1243,7 @@ export default {
       this.data.user = data.data.user
       this.data.games = data.data.games
       this.data.library = data.data.library
-      this.data.steambacklog = data.data.steambacklog
+      this.data.steamgamelog = data.data.steamgamelog
 
       this.data.appsToReview = data.apps.toReview
       this.data.appsToUpdate = data.apps.toUpdate

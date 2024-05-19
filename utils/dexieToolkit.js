@@ -20,7 +20,7 @@ export default {
   async checkDeepVersion(db) {
     db.close()
 
-    let checker = new Dexie('backlog.rip')
+    let checker = new Dexie('gamelog.rip')
     await checker.open()
 
     let conflictive = [9]
@@ -42,8 +42,8 @@ export default {
     log('🔸Backup: Starting the process')
     await delay(500, 'Waiting for databases to be truly ready')
 
-    await Dexie.delete('backlog.backup')
-    let target = new Dexie('backlog.backup')
+    await Dexie.delete('gamelog.backup')
+    let target = new Dexie('gamelog.backup')
 
     let schema = source.tables.reduce((schema, table) => {
       schema[table.name] =
@@ -70,10 +70,10 @@ export default {
 
   async update() {
     log('🔸Update DB: Starting the process')
-    await Dexie.delete('backlog.rip')
+    await Dexie.delete('gamelog.rip')
 
-    let target = new Dexie('backlog.rip')
-    let backup = new Dexie('backlog.backup')
+    let target = new Dexie('gamelog.rip')
+    let backup = new Dexie('gamelog.backup')
 
     target.version(11).stores({
       account: 'uuid',

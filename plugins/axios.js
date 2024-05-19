@@ -11,13 +11,13 @@ import axios from 'axios'
 export default defineNuxtPlugin(() => {
   // let domain =
   //   process.env.NODE_ENV == 'development'
-  //   ? 'https://api.backlog.rip'
-  //   : 'https://api.backlog.rip'
+  //   ? 'https://api.gamelog.rip'
+  //   : 'https://api.gamelog.rip'
 
   // log('Axios domain set to: ', domain)
 
   const instance = axios.create({
-    baseURL: 'https://api.backlog.rip',
+    baseURL: 'https://api.gamelog.rip',
     timeout: 60000,
     headers: {
       // accept: 'application/ld+json',

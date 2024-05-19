@@ -35,7 +35,7 @@ export default {
         continue
       }
 
-      // Filter: Backlog state
+      // Filter: Gamelog state
       // Match with app.state
       //+---------------------------------------
       if (filters?.states?.length) {

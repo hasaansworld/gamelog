@@ -18,7 +18,7 @@ import { importDB, exportDB, importInto, peakImportFile } from 'dexie-export-imp
 // Ref: https://dexie.org/docs/Version/Version.stores()
 //+-------------------------------------------------
 
-let db = new Dexie('backlog.rip')
+let db = new Dexie('gamelog.rip')
 
 let ver = 11
 let sch = {

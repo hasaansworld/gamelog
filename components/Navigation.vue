@@ -6,7 +6,7 @@
           <ul class="navbar-nav">
             <li
               v-if="false"
-              v-tippy="{ content: 'Show Backlog menu', placement: 'bottom' }"
+              v-tippy="{ content: 'Show Gamelog menu', placement: 'bottom' }"
               class="nav-item cursor-pointer"
               @click="$app.toggleSidebar()">
               <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
@@ -71,7 +71,7 @@
                 <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                   <Icon>Apps</Icon>
                 </span>
-                <span class="nav-link-title">Library and backlog</span>
+                <span class="nav-link-title">Library and gamelog</span>
               </NuxtLink>
             </li>
 

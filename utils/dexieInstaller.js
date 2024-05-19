@@ -13,9 +13,9 @@ export class DexieInstaller {
     {
       id: 1,
       order: 1,
-      key: 'backlog',
+      key: 'gamelog',
       color: '#ff0000',
-      name: 'Backlog',
+      name: 'Gamelog',
       description:
         "Games you've bought or added to your collection but haven't started playing yet. This makes it easier for you to keep an eye on the games you plan to dive into",
     },

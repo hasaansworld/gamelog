@@ -1,5 +1,5 @@
 <template>
-  <Command.Dialog :visible="ui.show" theme="backlog">
+  <Command.Dialog :visible="ui.show" theme="gamelog">
     <template #header>
       <div
         v-if="ui.tab"

@@ -39,7 +39,7 @@
 /**
  * @file:    \pages\auth.vue
  * @desc:    Receives the token from the backend and stores it
- *           this token identifies the user in the backlog.rip database
+ *           this token identifies the user in the gamelog.rip database
  * -------------------------------------------
  * Created Date: 21st March 2023
  * Modified: Wed Apr 10 2024

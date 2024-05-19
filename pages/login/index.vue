@@ -1,17 +1,19 @@
 <template>
-  <div class="row" style="height: inherit; margin: 0;">
-    <div class="col" style="background-image: url('https://source.unsplash.com/1600x900/?nature,water,architecture,pattern');
-      background-size: cover;"></div>
-    <div class="col" style="  background-color: purple; display: flex; align-items: center;">
+  <div class="row" style="height: inherit; margin: 0">
+    <div
+      class="col"
+      style="
+        background-image: url('https://source.unsplash.com/1600x900/?nature,water,architecture,pattern');
+        background-size: cover;
+      "></div>
+    <div class="col" style="background-color: purple; display: flex; align-items: center">
       <v-card class="mx-auto pa-4" width="400">
-            <v-card-text>
-              <p class="text-h6 text-bold text--primary mb-0">
-                Inicia sesión con tu cuenta
-              </p>
-              <div class="mb-7">Introduce tu usuario y contraseña</div>
+        <v-card-text>
+          <p class="text-h6 text-bold text--primary mb-0">Inicia sesión con tu cuenta</p>
+          <div class="mb-7">Introduce tu usuario y contraseña</div>
 
-              <form>
-                <!-- <v-text-field
+          <form>
+            <!-- <v-text-field
                   variant="underlined"
                   density="comfortable"
                   hide-details="auto"
@@ -21,88 +23,127 @@
                   required
                   class="mb-6"
                 ></v-text-field> -->
-                <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floating-input" autocomplete="off"
-                  v-model="username">
-                <label for="floating-input">Email address</label>
-              </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floating-input"
+                autocomplete="off"
+                v-model="username" />
+              <label for="floating-input">Email address</label>
+            </div>
 
-                <v-text-field
-                  variant="underlined"
-                  density="comfortable"
-                  hide-details="auto"
-                  v-model="password"
-                  :type="showPassword ? 'text' : 'password'"
-                  name="input-10-1"
-                  label="Contraseña"
-                  @keyup.enter="submit()"
-                  :error-messages="passwordErrors"
-                  required
-                  class="mb-3"
-                >
-                <template v-slot:append-inner>
-                  <v-icon style="cursor: pointer"
-                    @click="showPassword = !showPassword">
-                    {{ showPassword ? 'mdi-eye-outline' : 'mdi-eye-remove-outline' }}
-                  </v-icon>
-                  <!-- <v-tooltip
+            <v-text-field
+              variant="underlined"
+              density="comfortable"
+              hide-details="auto"
+              v-model="password"
+              :type="showPassword ? 'text' : 'password'"
+              name="input-10-1"
+              label="Contraseña"
+              @keyup.enter="submit()"
+              :error-messages="passwordErrors"
+              required
+              class="mb-3">
+              <template v-slot:append-inner>
+                <v-icon style="cursor: pointer" @click="showPassword = !showPassword">
+                  {{ showPassword ? 'mdi-eye-outline' : 'mdi-eye-remove-outline' }}
+                </v-icon>
+                <!-- <v-tooltip
                     activator="parent"
                     location="bottom">
                     Mostrar apellidos de contacto
                   </v-tooltip> -->
-                </template>
-              </v-text-field>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floating-input" autocomplete="off"
-                  v-model="password">
-                <label for="floating-input">Email address</label>
-              </div>
-              </form>
-            </v-card-text>
-            <v-card-actions>
-                <v-btn block depressed large color="primary"
-                :loading="loading"
-                @click="submit()">
-                Acceder
-              </v-btn>
-            </v-card-actions>
-          </v-card>
+              </template>
+            </v-text-field>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floating-input"
+                autocomplete="off"
+                v-model="password" />
+              <label for="floating-input">Email address</label>
+            </div>
+          </form>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            block
+            depressed
+            large
+            color="primary"
+            :loading="loading"
+            @click="submit()">
+            Acceder
+          </v-btn>
+        </v-card-actions>
+      </v-card>
 
-          <hr>
+      <hr />
 
-          <div class="col"><a href="http://api.backlog.test/auth/steam" class="btn btn-github w-100">
-                <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-steam" width="40"
-                  height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 2.995l-.176 .005a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z">
-                  </path>
-                  <circle cx="16.5" cy="9.5" r="1" fill="currentColor"></circle>
-                </svg>
-                Login Steam
-              </a></div>
-            <div class="col"><a href="http://api.backlog.test/auth/xbox" class="btn btn-green w-100">
-                <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="40"
-                  height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
-                </svg>
-                Login Xbox
-              </a></div>
-            <div class="col"><a href="http://api.backlog.test/auth/google" class="btn btn-google w-100">
-                <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="40"
-                  height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
-                </svg>
-                Login Google
-              </a></div>
+      <div class="col">
+        <a href="http://api.gamelog.test/auth/steam" class="btn btn-github w-100">
+          <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-steam"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 2.995l-.176 .005a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z"></path>
+            <circle cx="16.5" cy="9.5" r="1" fill="currentColor"></circle>
+          </svg>
+          Login Steam
+        </a>
+      </div>
+      <div class="col">
+        <a href="http://api.gamelog.test/auth/xbox" class="btn btn-green w-100">
+          <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-google"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+          </svg>
+          Login Xbox
+        </a>
+      </div>
+      <div class="col">
+        <a href="http://api.gamelog.test/auth/google" class="btn btn-google w-100">
+          <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-google"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+          </svg>
+          Login Google
+        </a>
+      </div>
     </div>
   </div>
 
